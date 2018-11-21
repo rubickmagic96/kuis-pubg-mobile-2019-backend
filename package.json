@@ -1,0 +1,21 @@
+{
+  "name": "kuis-pubg-mobile-2019-backend",
+  "version": "1.0.0",
+  "description": "tempat submit soal untuk aplikasi kuis pubg mobile 2019 android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pubg",
+    "mobile",
+    "quiz"
+  ],
+  "author": "rasyidcode",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "firebase-admin": "^6.2.0"
+  }
+}
