@@ -1,0 +1,11 @@
+#kuis pubg mobile 2019#
+
+input field:
+- id /string
+- soal /string
+- gambar /image file
+- correct-answer /string
+- wrong-answer /string
+- wrong-answer2 /string
+- wrong-answer3 //string
+- use image //boolean

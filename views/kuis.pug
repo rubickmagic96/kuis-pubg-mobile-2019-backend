@@ -1,0 +1,30 @@
+html
+    head
+        title Dashboard Kuis
+    body
+        p inilah dia tempat inputan kuis
+        form(action="/kuis/add" method="post")
+            div
+                label(for="soal") soal
+                input(type="text" name="soal")
+            div
+                label(for="use-image") use image
+                input(type="radio" name="use-image" value="1")
+                | Yes
+                input(type="radio" name="use-image" value="0")
+                | No
+            div
+                label(for="gambar") gambar
+                input(type="file" name="gambar")
+            div
+                label(for="correct-answer") jawaban yang benar
+                input(type="text" name="correct-answer")
+            div
+                label(for="wrong-answer1") jawaban yang salah #1
+                input(type="text" name="wrong-answer1")
+            div
+                label(for="wrong-answer2") jawaban yang salah #2
+                input(type="text" name="wrong-answer2")
+            div
+                label(for="wrong-answer3") jawaban yang salah #3
+                input(type="text" name="wrong-answer1")

@@ -14,8 +14,14 @@
   "author": "rasyidcode",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/firestore": "^0.19.0",
+    "@google-cloud/storage": "^2.3.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "firebase-admin": "^6.2.0"
+    "mime": "^2.4.0",
+    "mime-type": "^3.0.7",
+    "mime-types": "^2.1.21",
+    "multer": "^1.4.1",
+    "pug": "^2.0.3"
   }
 }
