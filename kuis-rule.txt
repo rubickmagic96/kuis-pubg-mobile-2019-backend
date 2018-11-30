@@ -1,5 +1,16 @@
 #kuis pubg mobile 2019#
 
+- kuis
+    - soal1
+        - id (eg -> 1)
+        - soal (eg -> who is the current president of indonesia?)
+        - use_image (eg -> true)
+        - image (eg -> anime.jpg)
+        - correct (eg -> jokowi)
+        - wrong1 (eg -> megawati)
+        - wrong2 (eg -> gusdur)
+        - wrong3 (eg -> jamil)
+
 input field:
 - id /string
 - soal /string
@@ -9,3 +20,5 @@ input field:
 - wrong-answer2 /string
 - wrong-answer3 //string
 - use image //boolean
+
+

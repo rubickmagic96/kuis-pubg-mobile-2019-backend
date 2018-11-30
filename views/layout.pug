@@ -1,0 +1,29 @@
+html
+    head
+        title Kuis
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css")
+
+        link(rel="stylesheet", href="../stylesheet/layout.css")
+        block customstyle
+    body
+        block header
+            section.hero.is-medium
+                .hero-body
+                    .container
+                    h1.title.has-text-centered.has-text-light
+                        | Question Maker for PUBG MOBILE QUIZ 2019
+                    h2.subtitle.has-text-centered.has-text-light
+                        | Use this tool to upload question to pubg mobile app that i want to make
+
+                    .box.has-text-centered
+                        a.button.is-primary.is-large.is-get-margin(href="/kuis/") All Question
+                        a.button.is-primary.is-large.is-get-margin(href="/kuis/submit") Post Question
+        block content
+        block footer
+            footer.footer.is-primary
+                .content.has-text-centered
+                    p
+                        strong &copy; ALRASYID CORP
+
+
+        block script

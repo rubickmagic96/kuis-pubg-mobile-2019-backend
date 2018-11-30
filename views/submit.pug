@@ -1,0 +1,79 @@
+extends layout.pug
+
+block customstyle
+    link(rel="stylesheet", href="../stylesheet/submit.css")
+
+block script
+    script(src="../javascript/submit.js")
+
+block content
+    .container
+        form(action='/kuis/add', method='post')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='id') QUIZ ID
+                .field-body
+                    .field
+                        .control
+                        input.input.is-large(type='text', value='#question1', disabled, name='id')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='question') Question
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='text', name='question')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label(for='use_image') Using Image?
+                .field-body
+                    .field
+                        .control
+                            label.radio
+                                input(type='radio', name='use_image', value="true" checked)
+                                | Yes
+                            label.radio
+                                input(type='radio', name='use_image', value="false")
+                                | No
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='image') Image
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='file', name='image')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='correct_answer') Correct Answer
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='text', name='correct_answer')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='wrong_answer1') Wrong Answer #1
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='text', name='wrong_answer1')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='wrong_answer2') Wrong Answer #2
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='text', name='wrong_answer2')
+            .field.is-horizontal
+                .field-label.is-large
+                    label.label.is-large(for='wrong_answer3') Wrong Answer #3
+                .field-body
+                    .field
+                        .control
+                            input.input.is-large(type='text', name='wrong_answer3')
+            .field.is-horizontal
+                .field-label.is-large
+                    
+                .field-body
+                    .field
+                        .control
+                            button.button.is-primary.is-large Post Question!

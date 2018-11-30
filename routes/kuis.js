@@ -1,27 +1,95 @@
 const express = require('express')
 const router = express.Router()
 
-const Firestore = require('@google-cloud/firestore')
-const { Storage } = require('@google-cloud/storage')
+router.get('/', (req, res, next) => {
+    let data = [
+        {
+            "id": "question1",
+            "question": "Apa nama game ini kalo anda tahu silahkan angkat kaki anda?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubgfffffffffffffffffffffffffffff",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        },
+        {
+            "id": "question1",
+            "question": "Apa nama game ini?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubg",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        },
+        {
+            "id": "question1",
+            "question": "Apa nama game ini?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubg",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        },
+        {
+            "id": "question1",
+            "question": "Apa nama game iniaa?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubg",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        },
+        {
+            "id": "question1",
+            "question": "Apa nama game iniaa?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubg",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        },
+        {
+            "id": "question1",
+            "question": "Apa nama game iniaa?",
+            "use_image": true,
+            "image": "../images/hero_background.jpg",
+            "correct": "pubg",
+            "wrong": "dota 2",
+            "wrong2": "lol",
+            "wrong3": "mobalejen"
+        }
+    ]
 
-const Multer = require('multer')
-const multer = Multer({
-    storage: Multer.memoryStorage(),
-    limits: {
-        fileSize: 5 * 1024 * 1024
-    }
+    let convertedData = []
+    let convertedDataInside = []
+    data.forEach((question, index) => {
+        convertedDataInside.push(question)
+
+        if (convertedDataInside.length == 3) {
+            convertedData.push(convertedDataInside)
+            convertedDataInside = []
+        }
+
+        if (data.length % 3 != 0 && index == (data.length - 1) || (index-1) == (data.length - 2)) {
+            convertedData.push(convertedDataInside)
+        }
+    })
+
+    console.log(convertedData.length)
+
+    res.render('home', { data: data})
 })
 
-const keyFilename = 'firebase_sdk_key.json'
-const projectId = 'kuis-pubg-mobile-2019'
-const bucketName = `${projectId}.appspot.com`
-const firestore = new Firestore({
-    projectId: projectId,
-    keyFilename: keyFilename
+router.get('/submit', (req, res, next) => {
+    res.render('submit')
 })
-const document = firestore.doc('test2/something-topost')
-const bucket = gcs.bucket(bucketName)
 
+module.exports = router
 
 
 

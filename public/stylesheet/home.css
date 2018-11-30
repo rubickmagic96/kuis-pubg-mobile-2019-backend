@@ -1,0 +1,9 @@
+.container.home-page {
+    padding: 50px 0;
+}
+.is-correct-answer {
+    background-color: hsl(171, 100%, 41%);
+}
+.is-wrong-answer {
+    background-color: hsl(348, 100%, 61%);
+}

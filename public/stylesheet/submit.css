@@ -1,0 +1,7 @@
+.container {
+    padding: 50px 0;
+}
+
+button.button.is-primary.is-large {
+    background-color: #eaa300;
+}

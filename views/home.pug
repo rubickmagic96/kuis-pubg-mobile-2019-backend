@@ -1,0 +1,29 @@
+extends layout.pug
+
+block customstyle
+    link(rel="stylesheet", href="../stylesheet/home.css")
+
+block content
+    .container.home-page
+        .columns
+            each val, index in data
+                if index < 3
+                    .column.is-one-third
+                        .card
+                            .card-image
+                                figure.image.is-4by3
+                                    img(src=`${val.image}`, alt="")
+                            .card-content
+                                .media
+                                    .media-content
+                                        p.title.is-5.has-text-centered.has-text-grey-light ##{val.id}
+                                        p.subtitle.is-3.has-text-centered=val.question
+                                .content
+                                    .box.is-correct-answer
+                                        p.has-text-white-ter=val.correct
+                                    .box.is-wrong-answer
+                                        p.has-text-white-ter=val.wrong
+                                    .box.is-wrong-answer
+                                        p.has-text-white-ter=val.wrong2
+                                    .box.is-wrong-answer
+                                        p.has-text-white-ter=val.wrong3
