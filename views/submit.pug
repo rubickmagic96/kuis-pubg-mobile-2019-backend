@@ -8,14 +8,15 @@ block script
 
 block content
     .container
-        form(action='/kuis/add', method='post')
+        form(action='/kuis/submit', method='post', enctype='multipart/form-data')
             .field.is-horizontal
                 .field-label.is-large
                     label.label.is-large(for='id') QUIZ ID
                 .field-body
                     .field
                         .control
-                        input.input.is-large(type='text', value='#question1', disabled, name='id')
+                        input.input.is-large(type='text', value=`#question${currentQuestion}`, disabled, name='id')
+                        input.input.is-large(type='hidden', value=`#question${currentQuestion}`, name='quiz_id')
             .field.is-horizontal
                 .field-label.is-large
                     label.label.is-large(for='question') Question

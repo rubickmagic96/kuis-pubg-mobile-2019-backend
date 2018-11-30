@@ -5,9 +5,9 @@ block customstyle
 
 block content
     .container.home-page
-        .columns
-            each val, index in data
-                if index < 3
+        each cols in data
+            .columns
+                each val in cols
                     .column.is-one-third
                         .card
                             .card-image
@@ -16,14 +16,14 @@ block content
                             .card-content
                                 .media
                                     .media-content
-                                        p.title.is-5.has-text-centered.has-text-grey-light ##{val.id}
+                                        p.title.is-5.has-text-centered.has-text-grey-light=val.id
                                         p.subtitle.is-3.has-text-centered=val.question
                                 .content
                                     .box.is-correct-answer
-                                        p.has-text-white-ter=val.correct
+                                        p.has-text-white-ter=val.correct_answer
                                     .box.is-wrong-answer
-                                        p.has-text-white-ter=val.wrong
+                                        p.has-text-white-ter=val.wrong_answer1
                                     .box.is-wrong-answer
-                                        p.has-text-white-ter=val.wrong2
+                                        p.has-text-white-ter=val.wrong_answer2
                                     .box.is-wrong-answer
-                                        p.has-text-white-ter=val.wrong3
+                                        p.has-text-white-ter=val.wrong_answer3
